@@ -1,7 +1,7 @@
 import sqlite3
 import pandas as pd
 
-from tabulate import tabulate
+
 
 connection = sqlite3.connect('Innerjoin.db')
 
