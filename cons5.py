@@ -5,10 +5,6 @@ connection = sqlite3.connect('nonullconstraint.db')
 connection.execute("PRAGMA foreign_keys = ON;")
 cursor = connection.cursor()
 
-
-
-
-
 table = """
 CREATE TABLE IF NOT EXISTS users (
     user_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -17,16 +13,7 @@ CREATE TABLE IF NOT EXISTS users (
 
 );
 """
-
-
-
-
-
 cursor.execute(table)
-
-
-
-
 
 
 try:

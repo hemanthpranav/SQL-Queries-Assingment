@@ -14,8 +14,6 @@ cursor.execute('''
         customer_name TEXT NOT NULL
     )
 ''')
-
-
 cursor.execute('''
     CREATE TABLE orders (
         order_id INTEGER PRIMARY KEY,
@@ -24,15 +22,9 @@ cursor.execute('''
         FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
     )
 ''')
-
-
 cursor.execute("INSERT INTO customers (customer_name) VALUES ('Pranav')")
 cursor.execute("INSERT INTO customers (customer_name) VALUES ('Bruce')")
-
-
 connection.commit()
-
-
 try:
     cursor.execute("INSERT INTO orders (customer_id, order_date) VALUES (4, '2023-12-18')")  
     connection.commit()
